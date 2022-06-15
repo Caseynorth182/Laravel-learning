@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\LaravelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,26 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function () {
-    return view('hello', [
-        'name' => 'Sasha',
-        'my_skills' => [
-            'html', 'css', 'vue'
-        ]
-    ]);
-});
+//Route::get('/hello', function () {
+//    return view('hello', [
+//        'name' => 'Sasha',
+//        'my_skills' => [
+//            'html', 'css', 'vue'
+//        ]
+//    ]);
+//});
+Route::get('/hello', [PagesController::class, 'helloPage']);
 
-Route::get('/test', function () {
-    return view('test');
-});
+Route::get('/test', [PagesController::class, 'testPage']);
 
-Route::get('/laravel', function () {
-    return view('laravel', [
-        'data' => [
-            "Laravel Jetstream",
-            "Models Directory",
-            "Model Factory Classes"
-        ]
-    ]);
-});
+Route::get('/laravel', [LaravelController::class, 'Laravel']);
 
