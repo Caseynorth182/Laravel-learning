@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\LaravelController;
+use App\Http\Controllers\StudentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,7 @@ Route::get('/hello', [PagesController::class, 'helloPage']);
 Route::get('/test', [PagesController::class, 'testPage']);
 
 Route::get('/laravel', [LaravelController::class, 'Laravel']);
+
+Route::get('/todos', [PagesController::class, 'todos']);
+Route::get('/students', [PagesController::class, 'students']);
 

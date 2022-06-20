@@ -1,0 +1,7 @@
+php artisan serve - запускаем сервер
+php artisan make:contraller ControllerName - создаем контроллер
+php artisan make:migration create_todos_table -создаем миграцию
+php artisan migrate - создает в БД таблицу которую начертили в файле миграций
+php artisan migrate:refresh - Откатит и пересоздаст БД таблицу
+php artisan make:model - Создает модель
+php artisan make:model Test -m - Создает Модель и миграцию
