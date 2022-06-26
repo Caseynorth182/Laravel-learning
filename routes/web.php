@@ -37,3 +37,6 @@ Route::get('/laravel', [LaravelController::class, 'Laravel']);
 Route::get('/todos', [PagesController::class, 'todos']);
 Route::get('/students', [PagesController::class, 'students']);
 
+Route::get('/blog', [PagesController::class, 'blog']);
+Route::get('/article/{id}', [PagesController::class, 'articlePage']);
+
